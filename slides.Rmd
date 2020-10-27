@@ -1,0 +1,39 @@
+---
+title: "Shiny Application and Reproducible Pitch"
+author: "NicolasGarcesR"
+date: "10/27/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Preview
+
+This is the Developing Data Products course project.The shiny product can be found in this link <https://nicolasgarces.shinyapps.io/Course_Project_NicolasGarces/>.
+
+The complete documentation can be found in this link <  >.
+
+## Product
+
+In this shiny product i made an interactive regression of the mtcars database.
+
+the graphs shows the regression of Miles per Gallon and Wt, depending on the selected range of both variables.
+
+when both sliders are completely to the right, you will see the regression  of the full mtcars dataset of both variables.
+
+## Dataset
+
+```{r cars, echo = TRUE}
+summary(mtcars)
+```
+
+## Plot with full dataset (sliders to the rigth)
+
+```{r pressure}
+data1= mtcars
+plot(data1$mpg, data1$wt,col="blue" ,xlim =c(9,34), ylim =c(0,6), ylab= "WT", xlab = "MPG")
+abline(lsfit(data1$mpg,data1$wt),col="red")
+```
+
